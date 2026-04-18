@@ -42,7 +42,7 @@ Gestion de la livraison / logistique
 
 
 4) Architecture (vue d'ensemble)
-React (Frontend) → Flask API (Backend) → MySQL (Base de données)
+React (Frontend) → Flask API (Backend) → SQLite (Base de données, dev)
 
 Frontend (React) : interface utilisateur, navigation, appels API
 Backend (Flask) : logique métier, validation, authentification, accès DB
