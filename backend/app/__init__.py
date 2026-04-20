@@ -39,6 +39,9 @@ def create_app():
 
     from app.routes.exchanges import exchanges_bp
     app.register_blueprint(exchanges_bp)
+
+    from app.routes.messages import messages_bp
+    app.register_blueprint(messages_bp)
     
     from app.models import User, Item, Exchange, Message, Review
     with app.app_context():
