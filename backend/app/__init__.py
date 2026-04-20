@@ -33,6 +33,9 @@ def create_app():
 
     from app.routes.auth import auth_bp
     app.register_blueprint(auth_bp)
+
+    from app.routes.items import items_bp
+    app.register_blueprint(items_bp)
     
     from app.models import User, Item, Exchange, Message, Review
     with app.app_context():
