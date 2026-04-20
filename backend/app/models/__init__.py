@@ -25,6 +25,7 @@ class Item(db.Model):
     size = db.Column(db.String(20))
     photo_url = db.Column(db.String(255))
     status = db.Column(db.String(20), default='available')
+    city = db.Column(db.String(100))
     created_at = db.Column(db.DateTime, server_default=db.func.now())
 
 

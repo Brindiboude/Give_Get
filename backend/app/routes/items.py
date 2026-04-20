@@ -16,6 +16,10 @@ def get_items():
         query = query.filter_by(category=category)
     if condition:
         query = query.filter_by(condition=condition)
+
+        city = request.args.get('city')
+    if city:
+        query = query.filter_by(city=city)
     
     items = query.all()
     
@@ -28,7 +32,8 @@ def get_items():
         'size': item.size,
         'photo_url': item.photo_url,
         'status': item.status,
-        'user_id': item.user_id
+        'user_id': item.user_id,
+        'city': item.city
     } for item in items]), 200
 
 
