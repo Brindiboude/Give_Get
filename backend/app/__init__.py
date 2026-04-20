@@ -24,4 +24,8 @@ def create_app():
     from app.routes import main
     app.register_blueprint(main)
     
+    from app.models import User, Item, Exchange, Message, Review
+    with app.app_context():
+        db.create_all()
+    
     return app
